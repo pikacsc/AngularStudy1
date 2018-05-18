@@ -1,0 +1,27 @@
+<form class="w3-container" [formGroup]="form">
+  <h2 class="w3-text-red">폼의 검증 상태</h2>
+  <p>특정 엘리먼트에 대한 속성은 form.controls.폼컨트롤명 형식으로 구한다.</p>
+
+  <div>
+    <input class="w3-input w3-border" formControlName="userId" name="userId" placeholder="아이디" />
+    <span *ngIf="form.controls.userId.errors">아이디를 형식에 맞게 입력해주세요!</span>
+  </div>
+  <div>
+    <input class="w3-input w3-border" formControlName="email" name="email" placeholder="이메일" />
+    <span *ngIf="form.controls.email.errors">형식이 맞지 않습니다!</span>
+  </div>
+</form>
+<hr />
+<div>
+  form.value : {{form.value|json}}<br>
+  form.valid : {{form.valid}}<br>
+  form.touched : {{form.touched}}<br>
+  form.untouched : {{form.untouched}}<br>
+  form.dirty : {{form.dirty}}<br>
+  form.controls.email.value : {{form.controls.email.value}}<br>
+  form.controls.email.valid : {{form.controls.email.valid}}<br>
+  form.controls.email.touched : {{form.controls.email.touched}} <br>
+  form.controls.email.untouched : {{form.controls.email.untouched}}<br>
+  form.controls.email.dirty : {{form.controls.email.dirty}}<br>
+  form.controls.email.errors : {{form.controls.email.errors | json }}
+</div>

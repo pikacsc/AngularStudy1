@@ -1,0 +1,12 @@
+button {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px dotted #666;
+}
+
+button.active {
+  background-color: #CFD7EB;
+  border: 1px solid #666;
+}

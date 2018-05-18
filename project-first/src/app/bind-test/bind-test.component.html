@@ -1,0 +1,53 @@
+<h3>bind-test.component.html</h3>
+
+<hr>
+
+<p>{{ name }}</p>
+<p [innerText]="name"></p>
+<!--
+[innerText]="name" or {{name}} property binding : JS -> HTML
+(name) event binding : HTML -> JS
+
+[(ngModel)] : 쌍방향,
+    인터폴레이션(보간) 표현식은 [innerText] 설정의 프로퍼티 바인딩식의
+    슈가코드입니다. 값은 언제나 문자열로 취급됩니다.
+    값을 처리할 때 HTML Escape 기능이 적용되지 않으므로
+    코드를 그대로 화면에 출력하고자 할 때 사용됩니다.
+  -->
+<p [innerHTML]="name"></p>
+<!--
+    프로퍼티 바인딩을 처리할 때 HTML Escape 기능이 디폴트로 적용됩니다.
+  -->
+
+<hr>
+
+<img src="{{imgURL}}" width="20%" /><br>
+<img [src]="imgURL" width="20%" /><br>
+<img src="https://lh3.googleusercontent.com/{{imgURI}}" width="20%" /><br>
+<img [src]="'https://lh3.googleusercontent.com/' + imgURI" width="20%" /><br>
+
+<hr>
+
+<div>
+  <button type="button" disabled>aaa</button><br>
+  <button type="button">bbb</button><br>
+  <!--
+      disabled 속성이 존재하기만 하면 이용할 수 없는 상태가 됩니다.
+    -->
+</div>
+<div>
+  <button type="button" disabled="{{isDisabled}}">111</button><br>
+  <button type="button" disabled="{{!isDisabled}}">111</button><br>
+  <!--
+      보간법을 사용하면 isDisabled 값과 상관없이 항상 false로 설정됩니다.
+    -->
+  <button type="button" [disabled]="isDisabled">222</button><br>
+  <button type="button" [disabled]="!isDisabled">222</button><br>
+  <!--
+      속성을 isDisabled 값에 따라 설정하려면 프로퍼티 바인딩을 사용해야합니다.
+    -->
+  <button type="button" bind-disabled="isDisabled">333</button><br>
+  <!--
+      [disabled]="isDisabled" 설정 대신 사용할 수 있습니다.
+    -->
+</div>

@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  padding: 10px;
+  background-color: lightgreen;
+}
+
+:host-context(.xxx) p {
+  color: red;
+}
+
+p {
+  color: blue;
+}

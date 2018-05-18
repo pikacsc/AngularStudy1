@@ -1,0 +1,22 @@
+<h2 class="w3-text-blue">Form Validation Driven Template</h2>
+<p>엘리먼트의 검증 상태 확인, 상태 키워드를 이용한 CSS 설정</p>
+
+<form class="submitted">
+  <input type="text" placeholder="input your id" name="id"
+      [(ngModel)]="user.id" #id="ngModel"
+      pattern="[a-z][a-z0-9]{1,9}" minlength="3" maxlength="10" required>
+</form>
+
+<hr />
+
+<p>id.untouched : <label class="ng-untouched">{{id.untouched}}</label></p>
+<p>id.touched : <label class="ng-touched">{{id.touched}}</label></p>
+<hr />
+<p>id.pristine : <label class="ng-pristine">{{id.pristine}}</label></p>
+<p>id.dirty : <label class="ng-dirty">{{id.dirty}}</label></p>
+<hr />
+<p class="submitted">id.valid : <label class="ng-valid">{{id.valid}}</label></p>
+<p class="submitted">id.invalid : <label class="ng-invalid">{{id.invalid}}</label></p>
+<hr />
+<div>id.value : {{id.value | json}}</div>
+<div>id.errors : <pre>{{id.errors | json}}</pre></div>

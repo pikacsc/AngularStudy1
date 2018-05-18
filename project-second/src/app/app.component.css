@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+/deep/ .child {
+  border: 1px solid dimgray;
+  display: block;
+  padding: 10px;
+}
+
+
+
+/deep/ button {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px dotted #666;
+}
+
+
+/deep/ button.active {
+  background-color: #CFD7EB;
+  border: 1px solid #666;
+}

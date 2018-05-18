@@ -1,0 +1,10 @@
+<h1>
+  {{ title }}
+</h1>
+<p>
+  {{ body }}
+</p>
+
+<hr/>
+
+<app-experiment-detail *ngFor="let experiment of experiments" [experiment]="experiment"></app-experiment-detail>

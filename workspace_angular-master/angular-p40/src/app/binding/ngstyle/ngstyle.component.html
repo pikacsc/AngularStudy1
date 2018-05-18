@@ -1,0 +1,22 @@
+<div>
+  <input type="text" [(ngModel)]="text">
+</div>
+<br/>
+
+<div>
+  <select [(ngModel)]="style">
+    <option value="normal">반듯한 글자</option>
+    <option value="italic">기울어진 글자</option>
+  </select>
+</div>
+<br/>
+
+<div>
+  <input id="weight" type="checkbox"
+    (change)="changeWeight($event);isChecked=!isChecked" [checked]="isChecked">
+  <label for="weight">볼드체</label>
+</div>
+<br/>
+
+<h1 [style.font-style]="style" [style.font-weight]="weight">{{text}}</h1>
+<h2 [ngStyle]="{'font-style': style, 'font-weight': weight}">{{text}}</h2>

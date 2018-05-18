@@ -1,0 +1,15 @@
+<div class="child">
+<select [(ngModel)]="gender">   <option value="1">남자</option>   <option value="2">여자</option> </select>
+
+<h2 *ngIf="gender == 1">남자가 선택됨</h2> <h1 *ngIf="gender == 2">여자가 선택됨</h1>
+
+<h3>
+   <ng-template [ngIf]="gender == 1">남자가 선택됨</ng-template>
+   <ng-template [ngIf]="gender == 2">여자가 선택됨</ng-template>
+   <label *ngIf="gender == 2">Female</label>
+   <!-- ng_template은 ngIf가 false여서 사라질때 같이 사라지고 일반태그에서는 ngIf만 사라진다-->
+</h3>
+<!-- 기존 엘리먼트에는 *ngIf 속성을 사용하고
+ng-template 태그에서는 [ngIf] 속성을 사용한다.
+ -->
+</div>

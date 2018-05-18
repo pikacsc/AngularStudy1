@@ -1,0 +1,40 @@
+input {
+  padding: 3px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid grey;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.ng-untouched {
+  font-weight: normal;
+}
+
+.ng-touched {
+  font-weight: bold;
+}
+
+.ng-pristine {
+  background-color: white;
+}
+
+input:focus {
+  background-color: orange;
+}
+
+.ng-dirty {
+  background-color: khaki;
+}
+
+.submitted .ng-valid {
+  border: 1px solid blue;
+}
+
+.submitted .ng-invalid {
+  border: 1px solid red;
+}

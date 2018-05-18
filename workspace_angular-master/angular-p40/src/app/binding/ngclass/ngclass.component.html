@@ -1,0 +1,13 @@
+<!-- class="active" -->
+<button class="button" [ngClass]="{active: isActive}"
+  (click)="isActive=!isActive;">{{isActive?'활성화':'비 활성화'}}</button>
+<br/>
+
+<button [ngClass]="myclass">버튼 1</button>
+<button [ngClass]="'active'">버튼 2</button>
+<button bind-ngClass="myclass">버튼 3</button>
+<br/>
+
+<button [attr.class]="myclass">버튼 4</button>
+<button [class.active]="isActive">버튼 5</button>
+<button class="{{isActive?'active':null}}">버튼 6</button>

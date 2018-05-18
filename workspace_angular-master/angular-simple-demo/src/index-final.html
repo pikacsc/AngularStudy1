@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <style id="stndz-style"></style>
+    <meta charset="utf-8">
+    <title>AngularSimpleDemo</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style type="text/css">
+      @import url(http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css);
+      </style><style type="text/css">
+      /* You can add global styles to this file, and also import other style files */
+    </style>
+    <style>
+      #header[_ngcontent-c0] {
+        height: 64px;
+        background: #fff;
+        position: fixed;
+        header: 0;
+        left: 0;
+        width: 100%;
+      }
+      #header[_ngcontent-c0] h1#logo[_ngcontent-c0] {
+        float: left;
+        margin: 0;
+      }
+      #header[_ngcontent-c0] h1#logo[_ngcontent-c0] a[_ngcontent-c0] {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAAAwCAYAAABDu6UjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2RUVEMzc1Qjg1MEIxMUUxOUZGQjk1OTJDQTI0Mjk0QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2RUVEMzc1Qzg1MEIxMUUxOUZGQjk1OTJDQTI0Mjk0QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZFRUQzNzU5ODUwQjExRTE5RkZCOTU5MkNBMjQyOTRCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZFRUQzNzVBODUwQjExRTE5RkZCOTU5MkNBMjQyOTRCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++Z2PcAAABnFJREFUeNrsXd1t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") no-repeat top left;
+        width: 194px;
+        height: 48px;
+        margin: 8px;
+        display: block;
+        text-indent: -9999px;
+      }
+      #header[_ngcontent-c0] .router-link-active[_ngcontent-c0] {
+        color: #C83434;
+      }
+      #header[_ngcontent-c0] .color[_ngcontent-c0] {
+        display: block;
+        height: 4px;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+      }
+      #header[_ngcontent-c0] #menu[_ngcontent-c0] {
+        float: left;
+        padding: 17px 40px 0 0;
+      }
+      #container[_ngcontent-c0] {
+        padding: 100px 20px 20px;
+      }
+      .color[_ngcontent-c0] {
+        background-color: rgba(195, 30, 30, 0.9) !important;
+      }
+      .shadow[_ngcontent-c0] {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAjCAYAAABVcWC0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc2RjdEMTc3M0ExQjExRTFBRjFGRUQwQjU3MzcxMThEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc2RjdEMTc4M0ExQjExRTFBRjFGRUQwQjU3MzcxMThEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzZGN0QxNzUzQTFCMTFFMUFGMUZFRDBCNTczNzExOEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzZGN0QxNzYzQTFCMTFFMUFGMUZFRDBCNTczNzExOEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5YkKsNAAAAJUlEQVR42mJgYGDgZwIS/3ER/0AEA5yLxsLGJVMJEsGMSwIgwADq+gxIhuPjbAAAAABJRU5ErkJggg==") repeat-x;
+        height: 35px;
+        position: fixed;
+        top: 68px;
+        width: 100%;
+      }
+    </style>
+    <style></style>
+  </head>
+  <body>
+    <app-root _nghost-c0="" ng-version="4.3.5">
+      <header _ngcontent-c0="" id="header">
+        <h1 _ngcontent-c0="" id="logo">
+          <a _ngcontent-c0="" routerlink="home" ng-reflect-router-link="home" href="/home"></a>
+        </h1>
+        <div _ngcontent-c0="" id="menu">
+          <a _ngcontent-c0="" class="btn" routerlink="home" ng-reflect-router-link="home" href="/home">Home</a>
+          <a _ngcontent-c0="" class="btn" routerlink="about" ng-reflect-router-link="about" href="/about">About</a>
+          <a _ngcontent-c0="" class="btn" routerlink="experiments" ng-reflect-router-link="experiments" href="/experiments">Experiments</a>
+        </div>
+        <div _ngcontent-c0="" class="color"></div>
+        <div _ngcontent-c0="" class="clear"></div>
+      </header>
+      <div _ngcontent-c0="" class="shadow"></div>
+      <div _ngcontent-c0="" id="container">
+        <router-outlet _ngcontent-c0=""></router-outlet>
+        <app-home _nghost-c1="">
+          <h1 _ngcontent-c1="">
+            Home Page
+          </h1>
+          <p _ngcontent-c1="">
+            This is the about home body
+          </p>
+          <hr _ngcontent-c1="">
+          <div _ngcontent-c1="">
+            <h2 _ngcontent-c1="" class="text-error">Home: Hello Message</h2>
+            <form _ngcontent-c1="" class="form-inline ng-untouched ng-pristine ng-valid" novalidate="">
+              <input _ngcontent-c1="" name="message" placeholder="Message" type="text" ng-reflect-name="message" ng-reflect-model="Hello Message" class="ng-untouched ng-pristine ng-valid">
+              <button _ngcontent-c1="" class="btn" type="submit">Update Message</button>
+            </form>
+          </div>
+        </app-home>
+      </div>
+    </app-root>
+    <!--빌드결과로 JS파일이 임포트된다.-->
+    <script type="text/javascript" src="inline.bundle.js"></script>
+    <script type="text/javascript" src="polyfills.bundle.js"></script>
+    <script type="text/javascript" src="styles.bundle.js"></script>
+    <script type="text/javascript" src="vendor.bundle.js"></script>
+    <script type="text/javascript" src="main.bundle.js"></script>
+    <!--
+  inspired by : https://github.com/simpulton/angular2-website-routes.git
+  upgraded by : softcontext@gmail.com
+ -->
+  </body>
+</html>

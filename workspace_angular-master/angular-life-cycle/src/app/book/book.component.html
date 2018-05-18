@@ -1,0 +1,20 @@
+<h3>도서리스트</h3>
+
+<div *ngFor="let book of books">
+  <app-book-image [path]="book.img"
+    [title]="book.name" [width]="80" [height]="120"
+    (selectBook)="onSelectBook($event)"></app-book-image>
+
+    <!-- 자식 컴포넌트의 코드  this.selectBook.emit(name);
+    EventEmitter 객체인 변수명 selectBook을 커스텀 이벤트 처럼 생각할 것
+   -->
+</div>
+<br>
+
+<span *ngIf="book">
+  <hr>
+  <h3>선택된 도서</h3>
+  <div>{{book.name}}</div>
+  <div>{{book.price | number}}</div>
+  <div>{{book.publishDate}}</div>
+</span>

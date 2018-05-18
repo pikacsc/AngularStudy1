@@ -1,0 +1,30 @@
+
+<h2 class="w3-text-blue">Form Validation Driven Template</h2>
+<p>템플릿 내장 검증기를 사용</p>
+
+<!--
+엘리먼트에 접근하여 검증하기 위해서 참조변수 #userId 선언이 필요하다.
+[(ngModel)]="user.id" 설정은 템플릿과 클래스 사이에서 양방향 데이터 동기화를 위한 설정이고
+#userId="ngModel" 설정은 해당 엘리먼트가 양방향 동기화 대상(ngModel)이므로
+pattern="^[a-z][a-z0-9]{1,9}" required 등에 평가기준을 적용하고 평가결과를
+userId 키로 관리하도록 지시한다.
+ -->
+<p>
+  <label class="w3-label w3-text-blue">ID</label><label>{{' : '+userId.valid}}</label>
+  <input class="w3-input w3-border" type="text" name="id"
+    [(ngModel)]="user.id" #userId="ngModel"
+    pattern="^[a-z][a-z0-9]{1,9}" required>
+</p>
+<p>
+  <label class="w3-label w3-text-blue">Name</label><label>{{' : '+userName.valid}}</label>
+  <input class="w3-input w3-border" type="text" name="name"
+    [(ngModel)]="user.name" #userName="ngModel"
+    required minlength="3" maxlength="10">
+</p>
+
+<div class="this-is-valid" *ngIf="userId.valid && userName.valid">
+  {{user|json}}
+</div>
+<div class="this-is-invalid" *ngIf="!userId.valid || !userName.valid">
+  {{user|json}}
+</div>

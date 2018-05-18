@@ -1,0 +1,8 @@
+<h5>home.component.html</h5>
+<div class="">
+  <input type="text" name=""  [(ngModel)]="str">
+  <!-- {{컴포넌트가 가지고 있는 인스턴스변수}}  단방향, 불러오기만 가능 -->
+<!-- [(ngModel)]="컴포넌트가 가지고 있는 인스턴스변수" 쌍방향-->
+  <button type="button" (click)="saveToService()">Save to Service</button>
+  <button type="button" (click)="getFromService()">Get from Service</button>
+</div>

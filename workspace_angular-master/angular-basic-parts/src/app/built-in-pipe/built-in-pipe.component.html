@@ -1,0 +1,103 @@
+<h3>문자열</h3>
+string:
+<label>{{str}}</label>
+<br>
+string | uppercase:
+<label>{{str | uppercase}}</label>
+<br>
+string | lowercase:
+<label>{{str | lowercase}}</label>
+<br>
+<h3>슬라이스</h3>
+string:
+<label>{{str}}</label>
+<br>
+string | slice:0:3:
+<label>{{str | slice:0:3}}</label>
+<br>
+string | slice:3:5:
+<label>{{str | slice:3:5}}</label>
+<br>
+<h3>숫자</h3>
+number:
+<label>{{num}}</label>
+<br>
+number | number:
+<label>{{num | number}}</label>
+<br>
+number | number:'.3-4':
+<label>{{num | number:'.3-4'}}</label>
+<br>
+number | number:'10.0-3':
+<label>{{num | number:'10.0-3'}}</label>
+<br>
+<h3>퍼센트</h3>
+number:
+<label>{{num}}</label>
+<br>
+number | percent:
+<label>{{num | percent}}</label>
+<br>
+number | percent:'2.1-2':
+<label>{{num | percent:'2.1-2'}}</label>
+<br>
+<h3>날짜</h3>
+date:
+<label>{{date}}</label>
+<br>
+date | date:
+<label>{{date | date}}</label>
+<br>
+date | date:'HH:mm':
+<label>{{date | date:'HH:mm'}}</label>
+<br>
+date | date:'fullDate':
+<label>{{date | date:"fullDate"}}</label>
+<br>
+date | date:'yyyy/MM/dd':
+<label>{{date | date:"yyyy/MM/dd"}}</label>
+<br>
+<h3>통화</h3>
+money:
+<label>{{money}}</label>
+<br>
+money | currency:
+<label>{{money | currency}}</label>
+<br>
+money | currency:'USD':
+<label>{{money | currency:'USD'}}</label>
+<br>
+money | currency:'USD':true:
+<label>{{money | currency:'USD':true}}</label>
+<br>
+money | currency:'KRW':
+<label>{{money | currency:'KRW'}}</label>
+<br>
+money | currency:'KRW':true:
+<label>{{money | currency:'KRW':true}}</label>
+<br>
+money | currency:'EUR':false:'3.2-2':
+<label>{{money | currency:'EUR':false:'3.2-2'}}</label>
+<br>
+<h3>JSON</h3>
+json:
+<label>{{json}}</label>
+<br>
+json:
+<label>{{json|json}}</label>
+<br>
+<pre>
+ <label>{{json|json}}</label>
+</pre>
+<h3>슬라이스 2</h3>
+<ul>
+  <li *ngFor="let item of items">
+    {{ item }}
+  </li>
+</ul>
+<br>
+<ul>
+  <li *ngFor="let item of items | slice:1:3">
+    {{ item }}
+  </li>
+</ul>

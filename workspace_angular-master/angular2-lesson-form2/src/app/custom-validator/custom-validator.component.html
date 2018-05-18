@@ -1,0 +1,26 @@
+
+<form class="w3-container" [formGroup]="form">
+  <h2 class="w3-text-red">커스텀 검증기</h2>
+  <p>파라미터로 FormControl을 받고 리턴값으로 {{'{검증기명:true}'}} 형태의 객체를 리턴한다.</p>
+
+  <p>
+    <label class="w3-label w3-text-red">Name</label>
+    <label>{{' : '+form.get('username').valid}}</label>
+    <label>{{' : '+form.value.username}}</label>
+    <input class="w3-input w3-border" type="text" formControlName="username">
+  </p>
+  <div *ngIf="!username.valid">
+      <div *ngIf="username.errors.required">이름을 입력하세요.</div>
+      <div *ngIf="username.errors.minlength">3글자 이상 입력하세요.</div>
+      <div *ngIf="username.errors.maxlength">10글자 이하로 작성하세요.</div>
+      <div *ngIf="username.errors.startWithNumber">숫자로 시작할 수 없습니다.</div>
+  </div>
+</form>
+
+<hr />
+
+<div>
+  form.valid : {{form.valid}} <br />
+  form.status : {{form.status}} <br />
+  form.value : <pre>{{form.value | json}}</pre>
+</div>

@@ -1,0 +1,97 @@
+<h1>
+  {{title}}
+</h1>
+<div>
+  <!--
+  routerLinkActive :
+  add a CSS class to an element when the link's route becomes active
+  https://angular.io/docs/ts/latest/api/router/index/RouterLinkActive-directive.html
+   -->
+  <div>
+
+    <h3>app.module.ts</h3>
+
+    <fieldset>
+      <legend>CanDeactivate 가드</legend>
+      <a routerLink="/child1" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child1</a>
+    </fieldset>
+
+    <fieldset>
+      <legend>CanActivate 가드</legend>
+      <a routerLink="/child2/7" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child2/7</a>
+    </fieldset>
+
+    특별한 내용이 없는 링크 <a routerLink="/child3" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child3</a>
+
+    <fieldset>
+      <legend>CanLoad 가드</legend>
+      <a routerLink="/lazy-load/lazy-load" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/lazy-load/lazy-load(레이지 로딩)</a>
+    </fieldset>
+
+  </div>
+
+  <div>
+
+    <h3>another/another-routing.module.ts</h3>
+
+    <fieldset>
+      <legend>RouterModule.forChild 연습</legend>
+      <a routerLink="/child4" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child4</a>
+      <a routerLink="/child5" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child5</a>
+    </fieldset>
+
+  </div>
+
+  <div>
+
+    <h3>lazy-load/lazy-load-routing.module.ts</h3>
+
+    <fieldset>
+      <legend>내용 없음</legend>
+      <a routerLink="/lazy-load" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/lazy-load(레이지로딩 아님)</a>
+    </fieldset>
+
+  </div>
+
+  <div>
+
+    <h3>children/children-routing.module.ts</h3>
+
+    <fieldset>
+      <legend>매핑 연습 : 단일 컴포넌트</legend>
+      <a routerLink="/child7" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child7</a>
+      <a routerLink="/child8" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child8</a>
+      <a routerLink="/child9" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/child9</a>
+      <a routerLink="/child10" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Not Found</a>
+    </fieldset>
+
+    <fieldset>
+      <legend>매핑 연습 : 부모 + 자식 컴포넌트</legend>
+      <a routerLink="/children" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/children</a>
+      <a routerLink="/children/child7" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/children/child7</a>
+      <a routerLink="/children/child8" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/children/child8</a>
+      <a routerLink="/children/child9" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/children/child9</a>
+    </fieldset>
+
+    <fieldset>
+      <legend>매핑 연습 : 부모 + 래퍼 + 자식 컴포넌트</legend>
+      <a routerLink="/wrapper/children" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/wrapper/children</a>
+      <a routerLink="/wrapper/children/child7" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/wrapper/children/child7</a>
+      <a routerLink="/wrapper/children/child8" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/wrapper/children/child8</a>
+      <a routerLink="/wrapper/children/child9" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/wrapper/children/child9</a>
+    </fieldset>
+
+    <fieldset>
+      <legend>CanActivateChild 가드</legend>
+      <a routerLink="/guard/children" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/guard/children</a>
+      <a routerLink="/guard/children/child7" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/guard/children/child7</a>
+      <a routerLink="/guard/children/child8" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/guard/children/child8</a>
+      <a routerLink="/guard/children/child9" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">/guard/children/child9</a>
+    </fieldset>
+
+  </div>
+</div>
+<hr />
+<div>
+  <router-outlet></router-outlet>
+</div>

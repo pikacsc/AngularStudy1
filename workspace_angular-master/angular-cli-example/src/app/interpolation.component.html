@@ -1,0 +1,28 @@
+{{1 + 1}}
+<br>
+{{hello()+" world!"}}
+<br>
+{{hello()==="hello"?"YES":"NO"}}
+<br>
+{{basket.items[0]}}
+<br>
+{{goodbye}}
+<br>
+<input type="text" value="{{myclass}}">
+<button class="{{myclass}}">{{myclass}}</button>
+<hr>
+<div class="">
+  x = {{x}}
+</div>
+<div class="">
+  <input type="text" name="" value="{{x}}">
+</div>
+<div class="">
+  <input type="text" name="" [ngModel]="x">
+</div>
+<div class="">
+  <input type="text" name="" [ngModel]="x" (ngModelChange)="x=$event">
+</div>
+<div class="">
+  <input type="text" name="" [(ngModel)]="x">
+</div>

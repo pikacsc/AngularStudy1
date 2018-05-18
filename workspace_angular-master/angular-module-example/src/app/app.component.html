@@ -1,0 +1,67 @@
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]="['/', 'intro']">
+        Root Module
+        <b class="glyphicon glyphicon-chevron-right"></b>
+        Intro</a>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Root Module
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a routerLink="hello">Hello</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="#">#</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Core Module
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <!-- CoreModule 의 TitleComponent 를 루트모듈의 CoreTestComponent 에서 사용합니다. -->
+        <li>
+          <a routerLink="core-test">Core Test</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="title">Title</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Feature Module
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <!-- MemberModule 의 MemberListComponent 를 사용합니다. -->
+        <li>
+          <a routerLink="member-list">Member List</a>
+        </li>
+        <li class="divider"></li>
+        <!-- PlayerModule 을 정적으로 연동한다. -->
+        <li>
+          <a routerLink="player">Player</a>
+        </li>
+        <!-- PlayerModule 을 동적으로 연동한다. 실제 사용할 때 객체화 하는 레이지로딩이다. -->
+        <li>
+          <a routerLink="lazy/player">Lazy Player</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+  <app-title [title]="'XXX'"></app-title>
+</div>

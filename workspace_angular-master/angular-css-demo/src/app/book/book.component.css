@@ -1,0 +1,16 @@
+/*컴포넌트 자신, :host 생략 불가*/
+:host {
+  display: block;
+  padding: 10px;
+  background-color: orange;
+}
+
+/*
+부모 HTML 에서 자식 컴포넌트 셀렉터(커스텀 태그) 선언 시 클래스를 설정했다면 적용
+<book class="active"></book>
+:host-context(.부모가 자식 셀렉터 사용 시 붙인 클래스) .현재 컴포넌트의 클래스
+*/
+:host-context(.active) .last {
+  color: purple;
+  font-size: 30px;
+}

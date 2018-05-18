@@ -1,0 +1,10 @@
+<p-dialog [(visible)]="display" [width]="300">
+  <p-header>
+    Header content here
+  </p-header>
+  Content
+  <p-footer>
+    <button type="button" (click)="save()" pButton icon="fa fa-telegram" label="Save"></button>
+  </p-footer>
+</p-dialog>
+<button type="text" (click)="showDialog()" pButton icon="fa-external-link-square" label="Show"></button>

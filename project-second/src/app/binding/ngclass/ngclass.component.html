@@ -1,0 +1,11 @@
+<div class="child">
+<!-- isActive 값이 true 일 때, class="active" 가 된다.  -->
+<button class="button" [ngClass]="{active: isActive}" (click)="isActive=!isActive;">{{isActive ? '활성화' : '비 활성화'}}</button> <br/>
+
+<button [ngClass]="myclass">버튼 1</button>
+<button [ngClass]="'active'">버튼2</button>
+<button bind-ngClass="myclass">버튼3</button> <br/>
+
+<button [attr.class]="myclass">버튼 4</button>
+<button [class.active]="true">버튼 5</button>
+</div>

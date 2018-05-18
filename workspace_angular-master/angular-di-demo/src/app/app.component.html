@@ -1,0 +1,27 @@
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active">
+      <a routerLink="home">Home</a>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Providers <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="value-provider">Value Provider</a></li>
+        <li><a routerLink="factory-provider">Factory Provider</a></li>
+        <li><a routerLink="class-provider">Class Provider</a></li>
+        <li><a routerLink="class-provider2">Class Provider2</a></li>
+        <li><a routerLink="factory-pattern">Factory Pattern</a></li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="#">#</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h3>Kpop Idols</h3>
+
+<ng-template ngFor let-idol [ngForOf]="idols">
+  <div class="panel panel-default">
+    <div class="panel-heading">{{idol.name}}</div>
+    <div class="panel-body">
+      <img src="./assets/image/{{idol.image}}" class="img-thumbnail">
+    </div>
+  </div>
+</ng-template>

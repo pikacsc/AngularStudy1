@@ -1,0 +1,32 @@
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active"><a routerLink="home">Home</a></li>
+    <li routerLinkActive="active"><a routerLink="profile">Profile</a></li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Messages <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="built-in-pipe">Buit-in Pipe</a></li>
+        <li><a routerLink="custom-pipe">Custom Pipe</a></li>
+        <li class="divider"></li>
+        <li>
+          <a href="#">Trash</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Directive <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="custom-directive">Custom Directive</a></li>
+        <li class="divider"></li>
+        <li><a routerLink="custom-event-directive">Custom Event Directive</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

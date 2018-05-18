@@ -1,0 +1,39 @@
+<div class="bs-example">
+  <h1>app.component</h1>
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active">
+      <a routerLink="twoway">Twoway</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="etc">Etc</a>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Bindings
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a routerLink="ng-class">ngClass</a>
+        </li>
+        <li>
+          <a routerLink="ng-style">ngStyle</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="ng-if">ngIf</a>
+        </li>
+        <li>
+          <a routerLink="ng-for">ngFor</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="ref">ref</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

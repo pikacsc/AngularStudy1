@@ -1,0 +1,13 @@
+<select [(ngModel)]="gender">
+  <option value="1">남자</option>
+  <option value="2">여자</option>
+</select>
+
+<h2 *ngIf="gender == 1">남자가 선택됨</h2>
+
+<h2 *ngIf="gender == 2">여자가 선택됨</h2>
+
+<h3>
+  <ng-template [ngIf]="gender == 1">남자가 선택됨</ng-template>
+  <ng-template [ngIf]="gender == 2">여자가 선택됨</ng-template>
+</h3>

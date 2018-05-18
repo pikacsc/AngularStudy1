@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  padding: 10px;
+  background-color: yellow;
+}
+
+/deep/ p {
+  font-size: 30px;
+}

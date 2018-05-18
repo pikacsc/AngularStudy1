@@ -1,0 +1,42 @@
+<!-- <app-parent></app-parent> -->
+
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="book">Book</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="view-child">ViewChild</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="counter">Counter</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="content-child">ContentChild</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="view-children">ViewChildren</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="content-children">ContentChildren</a>
+    </li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">#
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a routerLink="#">#</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a routerLink="#">#</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

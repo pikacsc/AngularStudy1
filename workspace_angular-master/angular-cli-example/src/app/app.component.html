@@ -1,0 +1,23 @@
+<div class="bs-example">
+  <ul class="nav nav-pills">
+    <li routerLinkActive="active"><a routerLink="home">Home</a></li>
+    <li routerLinkActive="active"><a routerLink="profile">Profile</a></li>
+    <li class="dropdown" routerLinkActive="active">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Messages <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="interpolation">Interpolation</a></li>
+        <li><a routerLink="oneway">Oneway</a></li>
+        <li><a routerLink="contact">contact</a></li>
+        <li><a routerLink="oneway-statement">onewayStatement</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Trash</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr/>
+  <div class="margin">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h3>home.component.html</h3>
+<div>
+  <h2 class="text-error">Home: {{ message }}</h2>
+  <form class="form-inline">
+    <input type="text" [(ngModel)]="message" placeholder="Message" name="message">
+    <button type="submit" class="btn" (click)="updateMessage(message)">Update Message</button>
+  </form>
+</div>

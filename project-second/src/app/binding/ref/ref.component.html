@@ -1,0 +1,19 @@
+<div class="child">
+
+<!-- #, ref- 설정으로 엘리먼트의 참조를 걸 수 있다
+이는 같은 화면내에서 다른 엘리먼트를 참조하기 위해서 사용
+-->
+ <p>
+   {{num1.value}} + {{num2.value}} = {{num1.valueAsNumber + num2.valueAsNumber}}
+ </p>
+  <input #num1 type="number" value="{{init.num1}}"> +
+  <input #num2 type="number" value="{{init.num2}}" (input)="0"> = {{num1.valueAsNumber + num2.valueAsNumber}}
+  <br/>
+
+
+<!-- $event: 이벤트가 발생한 엘리먼트의 참조 -->
+<input ref-number1 type="number" value="{{init.num1}}" (input)="init.num1 = $event.target.value"> +
+<input ref-number2 type="number" value="{{init.num2}}" (input)="init.num2 = number2.value"> = {{number1.valueAsNumber + number2.valueAsNumber}}
+
+<br/>
+</div>

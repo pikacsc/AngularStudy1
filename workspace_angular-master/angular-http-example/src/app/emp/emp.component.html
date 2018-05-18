@@ -1,0 +1,48 @@
+<div class="bs-example">
+  <div class="panel panel-warning" *ngIf="errorMessage">
+    <div class="panel-body">
+      <b class="text-warning">{{errorMessage}}</b>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-inline" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-group">
+          <label class="sr-only" for="firstName">First Name</label>
+          <input type="text" class="form-control" [(ngModel)]="firstName" id="firstName" name="firstName" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="lastName">Last Name</label>
+          <input type="text" class="form-control" [(ngModel)]="lastName" id="lastName" name="lastName" placeholder="Last Name" required>
+        </div>
+        <!--
+ <button type="button" class="btn btn-default btn-sm"
+ [disabled]="f.invalid" (click)="addEmp(firstName, lastName)">
+ <b class="glyphicon glyphicon-plus"></b> Add
+ </button> -->
+        <button type="submit" class="btn btn-default btn-sm" [disabled]="f.invalid">
+          <b class="glyphicon glyphicon-plus"></b>
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div *ngFor="let emp of emps" class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{emp.id}}</div>
+        <div class="panel-body">
+          {{emp.firstName}}{{' '}}{{emp.lastName}}
+        </div>
+        <div class="panel-footer clearfix">
+          <div class="pull-right">
+            <a href="#" class="text-warning" (click)="removeEmp(emp)">
+              <span class="glyphicon glyphicon-remove"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

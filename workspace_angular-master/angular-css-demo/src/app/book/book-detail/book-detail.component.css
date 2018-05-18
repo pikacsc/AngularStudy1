@@ -1,0 +1,9 @@
+:host div {
+  padding: 10px;
+  background-color: yellow;
+}
+
+:host-context(.active) button {
+  font-weight: bold;
+  color: red;
+}
